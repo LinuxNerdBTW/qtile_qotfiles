@@ -1,0 +1,77 @@
+configuration {
+  font: "Iosevka Nerd Font Medium Italic 12";
+
+  drun {
+    display-name: "";
+  }
+
+  run {
+    display-name: "";
+  }
+
+  window {
+    display-name: "";
+  }
+
+  timeout {
+    delay: 10;
+    action: "kb-cancel";
+  }
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+
+  /*bg: #282C34;*/
+  bg: #00000000;
+	fg: #ABB2BF;
+	blue: #61AFEF;
+	blue-alt: #61AFEF15;
+	red: #E06C75;
+  red-alt: #E06C7515;
+
+  background-color: @bg;
+  text-color: @fg;
+}
+
+window {
+  border: 2px;
+  border-color: @blue-alt;
+  border-radius: 6px;
+  padding: 10px 10px;
+  transparency: "real";
+  height: 300px;
+  fullscreen: true;
+  padding: 30% 30%;
+}
+
+mainbox {
+  children: [listview];
+}
+
+
+listview {
+
+}
+
+element {
+  border: 0 0 0 2px;
+  children: [element-text];
+}
+
+element selected {
+  border-color: @red;
+  border-radius: 6px;
+}
+
+element-text {
+  padding: 10px;
+}
+
+element-text selected {
+  background-color: @red-alt;
+  text-color: @red;
+}
